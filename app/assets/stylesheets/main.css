@@ -1384,7 +1384,6 @@ footer.major {
     padding-top: 3em;
 }
 
-
 /* Form */
 
 input[type="text"], input[type="password"], input[type="email"], textarea {
@@ -3305,14 +3304,14 @@ div #txt1
 }
 
 .demo-1 .large-header {
-  background-image: image-url('brain.jpg');
+  background-image: url('brain.jpg');
 	background-color: #393B55;
 }
 
-.demo-1 div #large-header
+.demo-1 + div #large-header
 {
   background-color: transparent;
-  background-image: image-url('brain.jpg');
+  background-image: url('brain.jpg');
 }
 
 .main-title {
