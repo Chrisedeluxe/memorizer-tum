@@ -15,7 +15,7 @@
     <article id="main">
 
       <header class="special container">
-        <h2 style="font-size: 60px; font-family: 'perpetua';font-weight: 100px;">Aufgaben</h2>
+        <h2 style="font-size: 100px; font-family: 'perpetua';font-weight: 100px;color: #7c8081;">Aufgaben</h2>
       </header>
       <!-- One -->
 
@@ -23,32 +23,22 @@
 		<div id="calendar"></div>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
 
-		<div style="background-color:rgba(57, 59, 69, 0);" class="content">
+		<div class="content">
 			<!-- /grid -->
 
 			<div class="grid">
 
-        <% @images.each do |image| %>
 				<div class="grid__item" data-size="1280x857">
-          <%= link_to image.image_url, :class => "img-wrap" do %>
-          <%= image_tag image.image_url(:thumb) if image.image?%>
-          <% end %>
             <div class="description description--grid">
-							<h3><%= image.title%></h3>
-							<p><%= image.description.html_safe %></p>
 						</div>
 					</a>
 				</div>
-        <% end %>
 			</div>
 			<!-- /grid -->
 			<div class="preview">
 				<button class="action action--close"><i class="fa fa-times"></i><span class="text-hidden">Close</span></button>
         <div class="thumbs">
           <button class="action action--nav action--navprev"><i class="fa fa-chevron-left"></i><span class="text-hidden">Previous</span></button>
-          <% @images.each do |image| %>
-          <%= image_tag image.image_url, :class => "thumb-img"%>
-          <% end %>
           <button class="action action--nav action--navnext"><i class="fa fa-chevron-right"></i><span class="text-hidden">Next</span></button>
         </div>
         <div class="description description--preview"></div>
@@ -61,6 +51,16 @@
 </div>
 
 <style>
+
+span
+{
+	color: #ffffff;
+}
+
+body
+{
+	color: #ffffff;
+}
 
 #calendar {
   -webkit-transform: translate3d(0, 0, 0);
@@ -75,7 +75,7 @@
 .header {
   height: 8%;
   width: 100%;
-  background: #161736;
+  background: /*rgb(47, 59, 94);*/rgb(44, 65, 126);
   text-align: center;
   position:relative;
   z-index: 100;
@@ -88,7 +88,7 @@
   line-height: 50px;
   font-weight: 100;
   letter-spacing: 1px;
-	color: #7c8081;
+	color: #ffffff;
 }
 
 .left, .right {
@@ -171,7 +171,14 @@
  color: rgba(255, 255, 255, .3);
 }
 
-.day.today {
+.day-number
+{
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+.day.today
+{
   color: #d94f5c;
 }
 
@@ -182,12 +189,6 @@
   color: rgba(255, 255, 255, .5);
   letter-spacing: .7px;
 }
-
-.day-number {
-  font-size: 24px;
-  letter-spacing: 1.5px;
-}
-
 
 .day .day-events {
   list-style: none;
@@ -218,7 +219,7 @@
   position: relative;
   width: 420px;
   height: 75px;
-  background: rgba(164, 164, 164, 1);
+  background: rgba(33, 100, 209, 0.4);
   margin-top: 5px;
   border-radius: 4px;
 }
@@ -244,7 +245,7 @@
   height: 0px;
   border-style: solid;
   border-width: 0 5px 5px 5px;
-  border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
+  border-color: transparent transparent rgba(87, 158, 198, 1) transparent;
   transition: all 0.7s ease;
 }
 
@@ -288,7 +289,7 @@
 }
 
 .event.empty {
-  color: #eee;
+  color: #ffffff;
 }
 
 .event-category {

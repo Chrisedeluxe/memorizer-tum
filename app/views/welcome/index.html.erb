@@ -495,7 +495,7 @@
 				<% @images.take(4).each do |image| %>
 				<div class="6u 12u(narrower)">
 					<section>
-						<%= link_to gallery_path, :class => "image featured" do %>
+						<%= link_to calendar_path, :class => "image featured" do %>
 						<%= image_tag image.image_url(:thumb) if image.image?%></a>
 					<% end %>
 					<header>
@@ -510,7 +510,7 @@
 		<footer class="major">
 			<ul class="buttons">
 				<li>
-					<%= link_to "zum Kalender", gallery_path, :class => "button" %>
+					<%= link_to "zum Kalender", calendar_path, :class => "button" %>
 				</li>
 			</ul>
 		</footer>

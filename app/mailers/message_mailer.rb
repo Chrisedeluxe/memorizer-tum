@@ -1,7 +1,7 @@
 class MessageMailer < ActionMailer::Base
 
-  default from: 'donotreply.dogmania@gmail.com'
-  default to: 'donotreply.dogmania@gmail.com'
+  default from: 'donotreply.memorizer@gmail.com'
+  default to: 'donotreply.memorizer@gmail.com'
 
   def new_message(message)
     @message = message
